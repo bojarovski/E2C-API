@@ -5,12 +5,12 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node backend/server.js",
+    "start": "node server.js",
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "data:import": "node backend/seeder.js",
-    "data:destroy": "nodebackend/seeder.js -d"
+    "data:import": "node seeder.js",
+    "data:destroy": "node seeder.js -d"
   },
   "author": "Marko Milenovic",
   "license": "MIT",
@@ -20,7 +20,8 @@
     "cookie-parser": "^1.4.7",
     "express": "^4.21.1",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.7.1"
+    "mongoose": "^8.7.1",
+    "multer": "^1.4.5-lts.1"
   },
   "devDependencies": {
     "concurrently": "^9.0.1",
